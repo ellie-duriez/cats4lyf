@@ -1,11 +1,11 @@
 import {useState, useEffect} from 'react'
 
-const CatCard = ({  }) => {
+const CatCard = () => {
     const [cat, setCat] = useState("");
     const getCat = async () => {
         let res = await fetch("https://api.thecatapi.com/v1/images/search");
-        let data = await res.json(); setCat(data[0]);
-        useEffect(()=>{getCat()},[]);}
+        let data = await res.json(); setCat(data[0]);}
+        useEffect(()=>{getCat()},[]);
         return (
         <>
         Cat below:
