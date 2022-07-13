@@ -1,4 +1,5 @@
 import {useState, useEffect} from 'react'
+import { Button } from './CatCardCss';
 
 const CatCard = () => {
     const [cat, setCat] = useState("");
@@ -8,8 +9,8 @@ const CatCard = () => {
         useEffect(()=>{getCat()},[]);
         return (
         <>
-        Cat below:
         <img src={cat.url} alt='cat'></img>
+        <Button>add to cart</Button>
         </>)
                         }
 
