@@ -2,7 +2,18 @@
   text-align: center;
 }
 
-.left-page{display: flex; flex-direction: column;}
+.left-page{display: flex; flex-direction: column; width: 80%;}
 
-img{max-height: 250px; border-radius: 5px; margin: 10px;}
+.title{font-size: 50px;}
 
+.cat-container{ margin: 5px; padding: 5px; display: flex; height: 25%; width: 100%;}
+
+img{ border-radius: 5px; margin: 10px; height: 90%; width: 90%;}
+
+.right-page{background-color: bisque; display: flex; flex-direction: column; width: 20%;justify-self: flex-end; margin-left: 50%;}
+
+.basket-title{padding: 10px; margin: 5px; font-size: 25px;}
+
+.basket-item{padding: 10px; margin: 5px;}
+
+.basket-total{padding: 10px; margin: 5px; justify-self: flex-end;}

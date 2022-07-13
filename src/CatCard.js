@@ -10,8 +10,9 @@ const CatCard = () => {
     useEffect(() => { getCat() }, []);
     return (
         <>
+        <Button src={cat.url} alt='cat'>
             <img src={cat.url} alt='cat'></img>
-            <Button>add to cart</Button>
+        </Button>
         </>)
 }
 
