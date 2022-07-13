@@ -8,5 +8,10 @@ function App() {
     </div>
   );
 }
+// const [catboyTwo, setCatboyTwo] = useState("");
+// const getCatboyTwo = async () => {
+//   let resTwo = await fetch("https://api.catboys.com/img");
+//   let dataTwo = await resTwo.json();
+//   setCatboyTwo(dataTwo.url);
 
 export default App;
