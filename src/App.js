@@ -3,10 +3,20 @@ import CatCard from './CatCard';
 
 function App() {
   return (
-    <div className="App">
-    <h1>cats4lyf!</h1>
-    <h2>Ellie's test</h2>
-    <CatCard/>
+    <div className='App'>
+      <div className='left-page'>
+        
+        <div>cats4lyf!</div>
+        <div className='cat-container'>
+        <CatCard/><CatCard/>
+        </div>
+        <div className='cat-container'>
+        <CatCard/><CatCard/>
+        </div>
+        <div className='cat-container'>
+        <CatCard/><CatCard/>
+        </div>
+      </div>
     </div>
   );
 }
