@@ -1,27 +1,25 @@
 import './App.css';
-import About from './Pages/About';
-import Home from './Pages/Home';
-import { BrowserRouter, Link, Routes, Route } from 'react-router-dom';
+import CatCard from './CatCard';
 
 function App() {
   return (
-    <BrowserRouter>
-      <div className="App">
-        <h1>cats4lyf!</h1>
-
-        {/* link to the about page */}
-        <Link to="/home">Home</Link>
-        <Link to="/about">About Us</Link>
-
-      </div >
-
-      {/* adding routes for About page */}
-      <Routes>
-        <Route path="/home" element={<Home />} />
-        <Route path="/about" element={<About />} />
-      </Routes>
-    </BrowserRouter>
+    <div className='App'>
+      <div className='left-page'>
+        
+        <div>cats4lyf!</div>
+        <div className='cat-container'>
+        <CatCard/><CatCard/>
+        </div>
+        <div className='cat-container'>
+        <CatCard/><CatCard/>
+        </div>
+        <div className='cat-container'>
+        <CatCard/><CatCard/>
+        </div>
+      </div>
+    </div>
   );
 }
+
 
 export default App;
