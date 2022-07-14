@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import { Button } from './CatCardCss';
+import Faker from "./Faker";
 
 const CatCard = () => {
     const [cat, setCat] = useState("");
@@ -13,6 +14,7 @@ const CatCard = () => {
         <>
             <Button>
                 <img src={cat.url} alt='cat'></img>
+                <Faker />
             </Button>
         </>)
 }
