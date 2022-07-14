@@ -12,21 +12,21 @@ const CatCard = () => {
         let urlCopies = data.map((item, index) => {return item.url;});
         setCat(urlCopies);};
         useEffect(() => {getCat();}, []);
-        return (<>
+        return (<div className='cat-container' >
         <Button >
             <img src={cat[0]} alt="cat"></img>
             <Faker />
         </Button>
-        </>);
+        </div>);
         };
 
-      export  const Basket =({cat})=>{
+      export const Basket =({cat})=>{
             const [basket, setBasket] = useState([]);
             const addToBasket =()=>{setBasket(cat)
         
             }
-            return(<form >
-                <div className='basket-item' src={basket} alt='catbuy'>
+            return(<form className='basket-item'>
+                <div  src={basket} alt='catbuy'>
                 </div>
             </form>)
         }
