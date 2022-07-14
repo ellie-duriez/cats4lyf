@@ -1,19 +1,87 @@
-.App {display: flex; background-color: aqua; height: fit-content;
+.App {
+  display: flex;
+  background-color: aqua;
+  height: fit-content;
   text-align: center;
 }
 
-.left-page{display: flex; flex-direction: column; width: 80%;}
+.heightOfPage {
+  display: flex;
 
-.title{font-size: 50px;}
+}
 
-.cat-container{ margin: 5px; padding: 5px; display: flex; height: 25%; width: 100%;}
 
-img{ border-radius: 5px; margin: 10px; height: 90%; width: 90%;}
+.left-page {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
 
-.right-page{background-color: bisque; display: flex; flex-direction: column; width: 20%;justify-self: flex-end; margin-left: 50%;}
+.title {
+  font-size: 50px;
+}
 
-.basket-title{padding: 10px; margin: 5px; font-size: 25px;}
+.cat-container {
+  margin: 5px;
+  padding: 5px;
+  display: flex;
+  height: 25%;
+  width: 100%;
+}
 
-.basket-item{padding: 10px; margin: 5px;}
+img {
+  border-radius: 5px;
+  margin: 10px;
+  height: 90%;
+  width: 90%;
+}
 
-.basket-total{padding: 10px; margin: 5px; justify-self: flex-end;}
+.right-page {
+  background-color: bisque;
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  justify-self: flex-end;
+  margin-left: 50%;
+}
+
+.basket-title {
+  padding: 10px;
+  margin: 5px;
+  font-size: 25px;
+}
+
+.basket-item {
+  padding: 10px;
+  margin: 5px;
+}
+
+.basket-total {
+  padding: 10px;
+  margin: 5px;
+  justify-self: flex-end;
+}
+
+
+/* Pages navigation styling */
+.pageNavDIV {
+  background-color: black;
+  height: max;
+  padding: 0.10cm;
+}
+
+.pageNavUL {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.pageNavUL a {
+  font-size: 0.5cm;
+  text-align: left;
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  color: aqua
+}

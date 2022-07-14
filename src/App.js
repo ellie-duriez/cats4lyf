@@ -1,58 +1,36 @@
-import './App.css';
-<<<<<<< HEAD
-import About from './Pages/About';
-import Home from './Pages/Home';
+import React from 'react'
 import { BrowserRouter, Link, Routes, Route } from 'react-router-dom';
+import './App.css';
+import Home from './Pages/Home';
+import About from './Pages/About';
 
 function App() {
   return (
     <BrowserRouter>
-      <div className="App">
-        <h1>cats4lyf!</h1>
+      <div className='title'>Welcome to the cats4lyf Website</div>
+      <div className='pageNavDIV'>
+        {/* Links to Home and About page */}
+        <ul className='pageNavUL'>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
 
-        {/* link to the about page */}
-        <Link to="/home">Home</Link>
-        <Link to="/about">About Us</Link>
+          <li>
+            <Link to="/about">About</Link>
+          </li>
 
-      </div >
+        </ul>
+      </div>
 
-      {/* adding routes for About page */}
+      {/* Router setups for Home and About Page */}
       <Routes>
-        <Route path="/home" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
       </Routes>
+
+
     </BrowserRouter>
   );
-=======
-import CatCard from './CatCard';
-
-function App() {
-  return (
-    <div className='App'>
-    <div className='left-page'>
-      <div className='title'>cats4lyf!</div>
-      <div className='cat-container'>
-      <CatCard/><CatCard/>
-      </div>
-      <div className='cat-container'>
-      <CatCard/><CatCard/>
-      </div>
-      <div className='cat-container'>
-      <CatCard/><CatCard/>
-      </div>
-    </div>
-    <div className='right-page'>
-      <div className='basket-title'>Basket</div>
-      <div className='basket-item'>Cat1</div>
-      <div className='basket-item'>Cat2</div>
-      <div className='basket-item'>Cat3</div>
-      <div className='basket-total'>Total: £(a prop probaly)</div>
-      <br></br>
-      <div className='checkout'>Buy Now!</div>
-    </div>
-  </div>
-);
->>>>>>> d5bb9c07da93693334bfeb41574cb52b15a20a74
 }
 
 

@@ -1,41 +1,23 @@
-<<<<<<< HEAD
+import React from 'react'
 import { useState, useEffect } from 'react'
-
-const CatCard = ({ }) => {
-    const [cat, setCat] = useState("");
-    const getCat = async () => {
-        let res = await fetch("https://api.thecatapi.com/v1/images/search");
-        let data = await res.json(); setCat(data[0]);
-
-    }
-    useEffect(() => { getCat() }, []);
-
-    return (
-        <>
-            Cat below:
-            <img src={cat.url} alt='cat'></img>
-        </>)
-}
-=======
-import {useState, useEffect} from 'react'
 import { Button } from './CatCardCss';
 
 const CatCard = () => {
     const [cat, setCat] = useState("");
     const getCat = async () => {
         let res = await fetch("https://api.thecatapi.com/v1/images/search");
-        let data = await res.json(); setCat(data[0]);}
-        useEffect(()=>{getCat()},[]);
-        return (
+        let data = await res.json(); setCat(data[0]);
+    }
+    useEffect(() => { getCat() }, []);
+    return (
         <>
-        <Button>
-        <img src={cat.url} alt='cat'></img>
-        </Button>
+            <Button>
+                <img src={cat.url} alt='cat'></img>
+            </Button>
         </>)
-                        }
->>>>>>> d5bb9c07da93693334bfeb41574cb52b15a20a74
+}
 
-export default CatCard;
+export default CatCard
 
 // function App() {
 //   const [cookie, setCookie] = useState('');
