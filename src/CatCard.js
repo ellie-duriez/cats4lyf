@@ -1,33 +1,37 @@
-import React from 'react'
-import { useState, useEffect } from 'react'
-import { Button } from './CatCardCss';
-import Faker from './Faker';
+import React from "react";
+import { useState, useEffect } from "react";
+import { Button } from "./CatCardCss";
+import Faker from "./Faker";
+import './App.css';
 
 const CatCard = () => {
     const [cat, setCat] = useState("");
     const getCat = async () => {
         let res = await fetch("https://api.thecatapi.com/v1/images/search");
         let data = await res.json();
+        let urlCopies = data.map((item, index) => {return item.url;});
+        setCat(urlCopies);};
+        useEffect(() => {getCat();}, []);
+        return (<>
+        <Button >
+            <img src={cat[0]} alt="cat"></img>
+            <Faker />
+        </Button>
+        </>);
+        };
 
-        let urlCopies = data.map((item, index) => {
-            return item.url;
-        });
+      export  const Basket =({cat})=>{
+            const [basket, setBasket] = useState([]);
+            const addToBasket =()=>{setBasket(cat)
+        
+            }
+            return(<form >
+                <div className='basket-item' src={basket} alt='catbuy'>
+                </div>
+            </form>)
+        }
 
-        setCat(urlCopies);
-
-
-    }
-    useEffect(() => { getCat() }, []);
-    return (
-        <>
-            <Button>
-                <img src={cat[0]} alt='cat'></img>
-                <Faker />
-            </Button>
-        </>)
-}
-
-export default CatCard
+export default CatCard;
 
 // function App() {
 //   const [cookie, setCookie] = useState('');

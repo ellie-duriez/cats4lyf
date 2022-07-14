@@ -1,8 +1,9 @@
 import React from 'react'
+import Basket from '../CatCard';
 import CatCard from '../CatCard';
 
-
 function Home() {
+
     return (
         <div className="heightOfPage">
             <div className='left-page'>
@@ -17,13 +18,7 @@ function Home() {
                 </div>
             </div>
             <div className='right-page'>
-                <div className='basket-title'>Basket</div>
-                <div className='basket-item'>Cat1</div>
-                <div className='basket-item'>Cat2</div>
-                <div className='basket-item'>Cat3</div>
-                <div className='basket-total'>Total: £(a prop probaly)</div>
-                <br></br>
-                <div className='checkout'>Buy Now!</div>
+                <Basket />
             </div>
         </div>
     )
@@ -31,3 +26,5 @@ function Home() {
 
 
 export default Home
+
+// onClick={addToBasket}
