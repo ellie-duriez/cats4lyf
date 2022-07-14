@@ -29,19 +29,14 @@
   width: 100%;
 }
 
-img {
-  border-radius: 5px;
-  margin: 10px;
-  height: 80%;
-  width: 90%;
-}
+
 
 .right-page {
   background-color: bisque;
   display: flex;
   flex-direction: column;
   width: 20%;
-  justify-self: flex-end;
+  
   margin-left: 50%;
 }
 
@@ -50,10 +45,15 @@ img {
   margin: 5px;
   font-size: 25px;
 }
-
 .basket-item {
   padding: 10px;
-  margin: 5px;
+  margin: 5px; height: 20px; width: 90%;
+}
+img {
+  border-radius: 5px;
+  margin: 10px;
+  height: 80%;
+  width: 90%;
 }
 
 .basket-total {
