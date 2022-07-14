@@ -1,32 +1,36 @@
+import React from 'react'
+import { BrowserRouter, Link, Routes, Route } from 'react-router-dom';
 import './App.css';
-import CatCard from './CatCard';
+import Home from './Pages/Home';
+import About from './Pages/About';
 
 function App() {
   return (
-    <div className='App'>
-    <div className='left-page'>
-      <div className='title'>cats4lyf!</div>
-      <div className='cat-container'>
-      <CatCard/><CatCard/>
+    <BrowserRouter>
+      <div className='title'>Welcome to the cats4lyf Website</div>
+      <div className='pageNavDIV'>
+        {/* Links to Home and About page */}
+        <ul className='pageNavUL'>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+
+          <li>
+            <Link to="/about">About</Link>
+          </li>
+
+        </ul>
       </div>
-      <div className='cat-container'>
-      <CatCard/><CatCard/>
-      </div>
-      <div className='cat-container'>
-      <CatCard/><CatCard/>
-      </div>
-    </div>
-    <div className='right-page'>
-      <div className='basket-title'>Basket</div>
-      <div className='basket-item'>Cat1</div>
-      <div className='basket-item'>Cat2</div>
-      <div className='basket-item'>Cat3</div>
-      <div className='basket-total'>Total: £(a prop probaly)</div>
-      <br></br>
-      <div className='checkout'>Buy Now!</div>
-    </div>
-  </div>
-);
+
+      {/* Router setups for Home and About Page */}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
+
+
+    </BrowserRouter>
+  );
 }
 
 
