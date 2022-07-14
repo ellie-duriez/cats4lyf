@@ -12,7 +12,7 @@ const CatCard = () => {
     useEffect(() => { getCat() }, []);
     return (
         <>
-            <Button>
+            <Button background='red'>
                 <img src={cat.url} alt='cat'></img>
                 <Faker />
             </Button>
