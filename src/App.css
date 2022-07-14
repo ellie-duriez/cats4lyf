@@ -7,13 +7,12 @@
 
 .heightOfPage {
   display: flex;
-
 }
-
 
 .left-page {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   width: 80%;
 }
 
@@ -21,23 +20,12 @@
   font-size: 50px;
 }
 
-.cat-container {
-  margin: 5px;
-  padding: 5px;
-  display: flex;
-  height: 25%;
-  width: 100%;
-}
-
-
-
 .right-page {
   background-color: bisque;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
-  width: 20%;
-  
-  margin-left: 50%;
+  width: 30%;
 }
 
 .basket-title {
@@ -46,14 +34,30 @@
   font-size: 25px;
 }
 .basket-item {
-  padding: 10px;
-  margin: 5px; height: 20px; width: 90%;
+  padding: 5px;
+  margin: 5px; 
+  border: blue solid 20px;
 }
+
+Button {
+  height: 90%;
+}
+
+.cat-container {
+  margin: 5px;
+  padding: 5px;
+  height: 15em;
+  width: 15em;
+}
+
+p {
+  font-size: 80%;
+}
+
 img {
   border-radius: 5px;
-  margin: 10px;
-  height: 80%;
-  width: 90%;
+  height: 50%;
+  max-width: 100%;
 }
 
 .basket-total {
