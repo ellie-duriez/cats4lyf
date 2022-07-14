@@ -1,19 +1,27 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import { Button } from './CatCardCss';
-import Faker from "./Faker";
+import Faker from './Faker';
 
 const CatCard = () => {
     const [cat, setCat] = useState("");
     const getCat = async () => {
         let res = await fetch("https://api.thecatapi.com/v1/images/search");
-        let data = await res.json(); setCat(data[0]);
+        let data = await res.json();
+
+        let urlCopies = data.map((item, index) => {
+            return item.url;
+        });
+
+        setCat(urlCopies);
+
+
     }
     useEffect(() => { getCat() }, []);
     return (
         <>
-            <Button background='red'>
-                <img src={cat.url} alt='cat'></img>
+            <Button>
+                <img src={cat[0]} alt='cat'></img>
                 <Faker />
             </Button>
         </>)
