@@ -6,6 +6,6 @@ export const Button = styled.button`
     margin: 16px;
     padding: 4px 16px;
     border: 2px solid ${(props) => props.background};
-    border-radius: 3px; height: 100%; width: 100%; 
+    border-radius: 3px; height: 100%; width: 100%; overflow:auto;
     &:hover {background: none;color: ${(props) => props.background};}
     `;
