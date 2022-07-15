@@ -15,13 +15,14 @@ function Home() {
 
         let fakerData = Faker();
 
-        let urlCopies = data.map((item, index) => { return item.url });
+        let urlCopies = data.map((item) => { return item.url });
 
         fakerData = fakerData.map((cat, index) => {
             cat.img = urlCopies[index];
             cat.id = index;
             return cat;
         });
+
 
         // setCat(urlCopies);
         setCat(fakerData);
@@ -36,9 +37,10 @@ function Home() {
     return (
         <div className="heightOfPage">
             <div className='left-page'>
-                <CatCard addToBasket={addToBasket} src={cat[0]} alt='cat' /><CatCard />
+                <CatCard index={0} addToBasket={addToBasket} imgURL={cat.img} alt='cat' /><CatCard />
                 <CatCard /><CatCard />
                 <CatCard /><CatCard />
+                {console.log(cat.img)}
             </div>
             <div className='right-page'>
                 <Basket value={basket} />
