@@ -52,6 +52,7 @@ Button {
 
 p {
   font-size: 80%;
+  line-height: 5px;
 }
 
 img {

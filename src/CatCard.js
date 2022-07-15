@@ -8,10 +8,11 @@ const CatCard = ({ addToBasket, cat, setCat, imgURL, img, index }) => {
     return (<div className='cat-container' >
         <Button onClick={()=>addToBasket(cat)}>
             <img index={index} src={imgURL}  alt="catImages"></img>
-            <div>{cat.age}</div>
-            <div>{cat.breed}</div>
-            <div>{cat.name}</div>
-            <div>£{cat.price}</div>
+            <p>{`Name: ${cat.name}`}</p>
+            <p>{`Age: ${cat.age}${cat.age===1?" year":" years"}`}</p>
+            <p>{`Sex: ${cat.sex}`}</p>
+            <p>{`Breed: ${cat.breed}`}</p>
+            <p>{`Price: £${cat.price}`}</p>
         </Button>
     </div>);
 };
