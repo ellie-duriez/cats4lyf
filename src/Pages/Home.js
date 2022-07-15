@@ -16,6 +16,7 @@ function Home() {
         let fakerData = Faker();
 
         let urlCopies = data.map((item) => { return item.url });
+        
 
         fakerData = fakerData.map((cat, index) => {
             cat.img = urlCopies[index];
@@ -26,8 +27,9 @@ function Home() {
 
         // setCat(urlCopies);
         setCat(fakerData);
+        
     };
-
+    {console.log(cat[0])}
     useEffect(() => { getCat(); }, []);
     const [basket, setBasket] = useState([]);
     const addToBasket = () => {
@@ -37,10 +39,16 @@ function Home() {
     return (
         <div className="heightOfPage">
             <div className='left-page'>
-                <CatCard index={0} addToBasket={addToBasket} imgURL={cat.img} alt='cat' /><CatCard />
+                {cat ? 
+                <CatCard id={0} index={0} addToBasket={addToBasket} imgURL={cat[0].img} alt='cat' />
+                :
+                <p>loading</p>
+                
+            }
+                <CatCard id={0} index={0} addToBasket={addToBasket} imgURL={cat[0].img} alt='cat' /><CatCard />
                 <CatCard /><CatCard />
                 <CatCard /><CatCard />
-                {console.log(cat.img)}
+                
             </div>
             <div className='right-page'>
                 <Basket value={basket} />
