@@ -12,11 +12,6 @@ const CatCard = ({ addToBasket, cat, setCat, imgURL, img, index }) => {
             <div>{cat.breed}</div>
             <div>{cat.name}</div>
             <div>£{cat.price}</div>
-                  
-                  
-           
-
-            
         </Button>
     </div>);
 };
