@@ -1,27 +1,17 @@
-import React from "react";
-import faker from "faker"
+import faker from "faker";
 
-function Faker() {
+const Faker = () => {
+    const dataArray = []
 
-    const data = {
-    name : faker.name.firstName(),
-    breed : faker.animal.cat(),
-    age : faker.datatype.number(20),
-    price : faker.commerce.price(100,600,0),
-    sex : faker.datatype.boolean()?"Female":"Male"
+    for (let i = 0; i < 20; i++) {
+        const name = faker.name.firstName()
+        const breed = faker.animal.cat()
+        const age = faker.datatype.number(20)
+        const price = faker.commerce.price(50, 500)
+
+        dataArray.push({ name, breed, age, price })
     }
-
-    return(
-        <div>
-            <p>
-            Name: {data.name} <br></br>
-            Breed: {data.breed} <br></br>
-            Age: {data.age} {data.age===1?"year":"years"}<br></br>
-            Price: £{data.price} <br></br>
-            Sex: {data.sex} <br></br>
-            </p>  
-        </div>
-    )
+    return dataArray
 }
 
 export default Faker;
