@@ -7,7 +7,8 @@ const CatCard = ({ addToBasket, cat, setCat, imgURL }) => {
 
     return (<div className='cat-container' >
         <Button onClick={addToBasket}>
-            <img src={imgURL}></img>
+            <img src={imgURL} alt="catImages"></img>
+            {/* <Faker /> */}
         </Button>
     </div>);
 };
